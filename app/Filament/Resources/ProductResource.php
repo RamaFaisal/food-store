@@ -6,6 +6,7 @@ use App\Filament\Resources\ProductResource\Pages;
 use App\Filament\Resources\ProductResource\RelationManagers;
 use App\Models\Product;
 use Filament\Forms;
+use Filament\Forms\Components\Card;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -30,7 +31,7 @@ class ProductResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Card::make()
+                Card::make()
                     ->schema([
                         Forms\Components\FileUpload::make('image')
                             ->label('Product Image')

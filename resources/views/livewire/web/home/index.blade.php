@@ -141,5 +141,6 @@
 
         </div>
 
+        {{-- @livewire('web.counter') --}}
     </div>
 </div>

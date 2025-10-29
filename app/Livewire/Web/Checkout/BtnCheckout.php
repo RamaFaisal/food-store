@@ -90,7 +90,7 @@ class BtnCheckout extends Component
                         'name'     => $cart->product->title,
                     ];
                 }
-
+                
                 $item_details[] = [
                     'id' => 'shipping',
                     'price' => $this->selectCost,
@@ -127,7 +127,6 @@ class BtnCheckout extends Component
         } catch (\Exception $e) {
             session()->flash('error', 'Terjadi kesalahan saat memproses checkout. Silakan coba lagi.');
 
-            // Set loading
             $this->loading = false;
             return;
         }

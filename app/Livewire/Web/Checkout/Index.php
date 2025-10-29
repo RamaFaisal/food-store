@@ -49,16 +49,12 @@ class Index extends Component
     public function changeCourier($value)
     {
         if (!empty($value)) {
-            //set courier
             $this->selectCourier = $value;
 
-            //set loading
             $this->loading = true;
 
-            //set show cost false
             $this->showCost = false;
 
-            //call method CheckOngkir
             $this->CheckOngkir();
         }
     }
@@ -73,7 +69,7 @@ class Index extends Component
                 'key' => config('rajaongkir.api_key')
             ])->withOptions([
                 'query' => [
-                    'origin'      => 3855,
+                    'origin'      => 59571,
                     'destination' => $this->district_id,
                     'weight'      => $cartData['totalWeight'],
                     'courier'     => $this->selectCourier,
